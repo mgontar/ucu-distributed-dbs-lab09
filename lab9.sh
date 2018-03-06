@@ -113,5 +113,5 @@ db.orders.mapReduce(mapFunc, reduceFunc, { out: "mrresult"});
 db.mrresult.find();
 var mapFunc2 = function() {emit(this._id, this.values);};
 var reduceFunc2 = function(key, values) { return  Array.sum(values); };
-db.mrresult.mapReduce(mapFunc2, reduceFunc2, { out: "mrresult2", query:{"value": {$gt: 0}}});
+db.mrresult.mapReduce(mapFunc2, reduceFunc2, { out: "mrresult2", query:{"value": {$gt: 2}}});
 db.mrresult2.find();'

@@ -117,3 +117,45 @@ db.orders.insert({
         }
     ]
 });
+db.orders.insert({
+	"order_number" : 123157,
+    "date" : ISODate("2017-12-22"),
+    "total_sum" : 600,
+	"customer" : {
+        "name" : "Ivan",
+        "surname" : "Sydorenko",
+        "phones" : ["09612312312"],
+        "address" : "vul Zelena 300, Lviv, Ukraine"
+    },
+    "payment" : {
+        "card_owner" : "Ivan Sydorenko",
+        "cardId" : "342434744241868"
+    },
+	"order_items_id" : [
+        {
+            "$ref" : "products",
+            "$id" : ObjectId("5a3bb1acd5b0c480829ee353")
+        }
+    ]
+});
+db.orders.insert({
+	"order_number" : 123158,
+    "date" : ISODate("2017-12-29"),
+    "total_sum" : 600,
+	"customer" : {
+        "name" : "Ivan",
+        "surname" : "Sydorenko",
+        "phones" : ["09612312312"],
+        "address" : "vul Zelena 300, Lviv, Ukraine"
+    },
+    "payment" : {
+        "card_owner" : "Ivan Sydorenko",
+        "cardId" : "342434744241868"
+    },
+	"order_items_id" : [
+        {
+            "$ref" : "products",
+            "$id" : ObjectId("5a3bb1acd5b0c480829ee353")
+        }
+    ]
+});
